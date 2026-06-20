@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: marche-terroir-api
+    env: node
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: DATABASE_URL
+        sync: false
+      - key: JWT_SECRET
+        sync: false
